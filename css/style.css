@@ -14,3 +14,156 @@ html {
     font-family: 'Quicksand', sans-serif;
 }
 
+a {
+    text-decoration: none;
+}
+
+/*******************************
+            NAVBAR
+*******************************/
+
+.navbar {
+    display: flex;
+    background-color: var(--main-blue-color);
+}
+
+/*****
+LOGO
+*****/
+
+.nav-logo {
+    padding: 1rem;
+    width: 20%;
+    font-weight: 900;
+    font-size: 3.6rem;
+}
+
+.nav-logo a {
+    color: var(--text-white-color);
+}
+
+/*****
+SEARCH
+******/
+
+.nav-search {
+    align-self: center;
+    width: 100%;
+    max-width: 50%;
+}
+
+.nav-input {
+    width: 95%;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 10px;
+}
+
+.nav-input::placeholder {
+    color: var(--main-blue-color);
+}
+
+.nav-input:focus {
+    outline: none;
+}
+
+.nav-input:focus {
+    color: var(--main-blue-color);
+}
+
+#search-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: -30px;
+}
+
+.fa-search {
+    color: var(--main-blue-color);
+}
+
+/******
+LINKS
+******/
+
+.navigation {
+    align-self: center;
+    width: 30%;
+}
+
+.nav-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style: none;
+    text-align: center;
+}
+
+.nav-link {
+    color: var(--text-white-color);
+    font-size: 1rem;
+}
+
+.nav-link:hover {
+    color: #5D5D81;
+}
+
+.link-text {
+    display: block;
+}
+
+/*******************************
+        MEDIA QUERY
+*******************************/
+
+@media (max-width: 1440px) {
+    .nav-logo {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 1250px) {
+    .nav-logo {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 950px) {
+    .nav-link {
+        font-size: 0.7rem;
+    }
+    .nav-input {
+        padding: 0.5rem;
+    }
+}
+
+@media (max-width: 720px) {
+    .nav-logo {
+        width: 40%;
+        font-size: 1.4rem;
+        order: 2;
+        text-align: center;
+    }
+    .nav-search {
+        width: 30%;
+        order: 1;
+    }
+    .navigation {
+        order: 3;
+    }
+    .nav-input {
+        display: none
+    }
+    #search-button {
+        margin-left: 2rem;
+    }
+    .fa-search {
+        color: var(--text-white-color);
+    }
+    .link-text {
+        display: none;
+    }
+    .link-icon {
+        font-size: 1rem;
+    }
+}
