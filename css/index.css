@@ -67,7 +67,7 @@ CONTROLS
     TOP-SELLERS
 **********************/
 
-.top-sellers {
+.top-sellers, .highlights {
     display: flex;
     flex-direction: column;
     margin-top: 5rem;
@@ -106,6 +106,10 @@ CATALOG
     align-items: center;
     border: 1px solid rgba(93, 93, 129, 0.3);
     border-radius: 5%;
+}
+
+.highlights .catalog-item {
+    background-color: #EFEFF1;
 }
 
 .catalog-img {
@@ -203,7 +207,7 @@ CATALOG
 }
 
 @media (max-width: 720px) {
-    .top-sellers {
+    .top-sellers, .highlights {
         margin-top: 3rem;
     }
     .section-title {
