@@ -85,7 +85,7 @@
         "id": 9,
         "name": "Vestido goiaba",
         "type": "kid",
-        "img": "../images/products/vestido_goiaba.jpg",
+        "img": "../images/products/vestido_goiaba.jpeg",
         "color": "rosa",
         "size": [4, 6, 7, 8, 9],
         "price": "R$56,00"
