@@ -32,7 +32,7 @@
             "name": "Camiseta Flamingo",
             "type": "kid",
             "img": "../images/products/camiseta_flamingo.jpg",
-            "color": "Azul",
+            "color": "azul",
             "size": [4, 6, 7, 8],
             "price": 150
         },
@@ -41,7 +41,7 @@
             "name": "Vestido Cherry",
             "type": "kid",
             "img": "../images/products/vestido_cherry.jpg",
-            "color": "Azul escuro",
+            "color": "azul",
             "size": [4, 6, 7, 8, 9],
             "price": 140
         },
