@@ -34,4 +34,76 @@ generateProducts();
 
 
 
+/****** FILTRO *******/
+
+// Fitro preço
+filterByPrice = (json, value) => {
+    let exists = false;
+    productsContainer.innerHTML = ``;
+    for(let x = 0; x < json.length; x++) {
+        if(json[x].type == 'baby' && json[x].price == value) {
+            exists = true;
+            productsContainer.innerHTML += `
+            <div class="single-product">
+                <img src="`+json[x].img+`">
+                <span class="catalog-line"></span>
+                <p class="product-title">`+json[x].name+`</p>
+                <p class="product-price">R$`+json[x].price+`,00</p>
+                <a class="product-button" key="`+json[x].id+`" href="#">Comprar</a>
+            </div>
+            `;
+        }
+    }
+    if(!exists) {
+        productsContainer.innerHTML = `'
+        <h2>Nenhum produto foi encontrado :(</h2>
+        `;
+    }
+}
+
+//console.log(filterByPrice(jsonObject.products, 190));
+
+// Filtro menor valor
+
+filterByLowestPrice = (json) => {
+    for(let x = 0; x < json.length; x++) {
+
+    }
+}
+
+console.log(filterByLowestPrice(jsonObject.products));
+
+
+// Filtro maior valor
+
+filterByBiggestPrice = () => {
+
+}
+
+// Filtro por COR
+
+filterByColor = (json, color) => {
+    productsContainer.innerHTML = ``;
+    for(let x = 0; x < json.length; x++) {
+        for(let z = 0; z < json[x].color.length; z++) {
+            if(json[x].type == "baby" && json[x].color[z] == color) {
+                console.log(json[x]);//////////////////////////////////
+                productsContainer.innerHTML += `
+                
+                <div class="single-product">
+                <img src="`+json[x].img+`">
+                <span class="catalog-line"></span>
+                <p class="product-title">`+json[x].name+`</p>
+                <p class="product-price">R$`+json[x].price+`,00</p>
+                <a class="product-button" key="`+json[x].id+`" href="#">Comprar</a>
+                </div>
+                
+                `;
+            }
+        }
+    }
+}
+
+//filterByColor(jsonObject.products, "azul");
+
 
