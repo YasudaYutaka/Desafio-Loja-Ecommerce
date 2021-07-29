@@ -23,8 +23,8 @@
             "name": "Body Animais",
             "type": "baby",
             "img": "../images/products/body_animais.jpg",
-            "color": "verde",
-            "size": "P",
+            "color": ["verde"],
+            "size": ["P"],
             "price": 100
         },
         {
@@ -32,7 +32,7 @@
             "name": "Camiseta Flamingo",
             "type": "kid",
             "img": "../images/products/camiseta_flamingo.jpg",
-            "color": "azul",
+            "color": ["azul"],
             "size": [4, 6, 7, 8],
             "price": 150
         },
@@ -41,7 +41,7 @@
             "name": "Vestido Cherry",
             "type": "kid",
             "img": "../images/products/vestido_cherry.jpg",
-            "color": "azul",
+            "color": ["azul"],
             "size": [4, 6, 7, 8, 9],
             "price": 140
         },
@@ -50,7 +50,7 @@
             "name": "Body Gliter",
             "type": "baby",
             "img": "../images/products/body_gliter.jpg",
-            "color": "preto",
+            "color": ["preto"],
             "size": ["PP", "P", "M"],
             "price": 130
         },
@@ -59,7 +59,7 @@
             "name": "Vestido folhas",
             "type": "kid",
             "img": "../images/products/vestido_folha.jpg",
-            "color": "verde",
+            "color": ["verde"],
             "size": [4, 6, 8, 9],
             "price": 150
         },
@@ -68,7 +68,7 @@
             "name": "Vestido folha",
             "type": "kid",
             "img": "../images/products/vestido_folha_azul.jpg",
-            "color": "azul",
+            "color": ["azul"],
             "size": [6, 7, 8],
             "price": 170
         },
@@ -77,7 +77,7 @@
             "name": "Vestido flamingo",
             "type": "kid",
             "img": "../images/products/vestido_flamingo.jpg",
-            "color": "verde",
+            "color": ["verde"],
             "size": [4, 8, 9],
             "price": 150
         },
@@ -86,7 +86,7 @@
             "name": "Vestido goiaba",
             "type": "kid",
             "img": "../images/products/vestido_goiaba.jpeg",
-            "color": "rosa",
+            "color": ["rosa"],
             "size": [4, 6, 7, 8, 9],
             "price": 56   
         },
@@ -95,7 +95,7 @@
             "name": "Body Unicórnio",
             "type": "baby",
             "img": "../images/products/body_unicornio.jpg",
-            "color": "rosa",
+            "color": ["rosa"],
             "size": ["P", "M", "G"],
             "price": 54    
         },
@@ -104,7 +104,7 @@
             "name": "Body Unicórnio Praia",
             "type": "baby",
             "img": "../images/products/body_unicornio_a.jpg",
-            "color": "azul",
+            "color": ["azul"],
             "size": ["P", "M", "G"],
             "price": 74    
         }
