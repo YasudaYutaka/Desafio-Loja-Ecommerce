@@ -1,0 +1,113 @@
+{
+    "products": [
+    {
+        "id": 0,
+        "name": "Conjunto Coelho",
+        "type": "baby",
+        "img": "../images/products/kit_bunny.jpg",
+        "color": ["branco", "rosa"],
+        "size": ["P", "M"],
+        "price": "R$190,00"
+    },
+    {
+        "id": 1,
+        "name": "Conjunto Baleia",
+        "type": "baby",
+        "img": "../images/products/conjunto_whale.jpg",
+        "color": ["azul", "cinza"],
+        "size": ["PP","P", "M"],
+        "price": "R$190,00"
+    },
+    {
+        "id": 2,
+        "name": "Body Animais",
+        "type": "baby",
+        "img": "../images/products/body_animais.jpg",
+        "color": "verde",
+        "size": "P",
+        "price": "R$100,00"
+    },
+    {
+        "id": 3,
+        "name": "Camiseta Flamingo",
+        "type": "kid",
+        "img": "../images/products/camiseta_flamingo.jpg",
+        "color": "Azul",
+        "size": [4, 6, 7, 8],
+        "price": "R$150,00"
+    },
+    {
+        "id": 4,
+        "name": "Vestido Cherry",
+        "type": "kid",
+        "img": "../images/products/vestido_cherry.jpg",
+        "color": "Azul escuro",
+        "size": [4, 6, 7, 8, 9],
+        "price": "R$140,00"
+    },
+    {
+        "id": 5,
+        "name": "Body Gliter",
+        "type": "baby",
+        "img": "../images/products/body_gliter.jpg",
+        "color": "preto",
+        "size": ["PP", "P", "M"],
+        "price": "R$135,00"
+    },
+    {
+        "id": 6,
+        "name": "Vestido folhas",
+        "type": "kid",
+        "img": "../images/products/vestido_folha.jpg",
+        "color": "verde",
+        "size": [4, 6, 8, 9],
+        "price": "R$150,00"
+    },
+    {
+        "id": 7,
+        "name": "Vestido folha",
+        "type": "kid",
+        "img": "../images/products/vestido_folha_azul.jpg",
+        "color": "azul",
+        "size": [6, 7, 8],
+        "price": "R$176,00"
+    },
+    {
+        "id": 8,
+        "name": "Vestido flamingo",
+        "type": "kid",
+        "img": "../images/products/vestido_flamingo.jpg",
+        "color": "verde",
+        "size": [4, 8, 9],
+        "price": "R$156,00"
+    },
+    {
+        "id": 9,
+        "name": "Vestido goiaba",
+        "type": "kid",
+        "img": "../images/products/vestido_goiaba.jpg",
+        "color": "rosa",
+        "size": [4, 6, 7, 8, 9],
+        "price": "R$56,00"
+    },
+    {
+        "id": 10,
+        "name": "Body Unicórnio",
+        "type": "baby",
+        "img": "../images/products/body_unicornio.jpg",
+        "color": "rosa",
+        "size": ["P", "M", "G"],
+        "price": "R$54,00"
+    },
+    {
+        "id": 11,
+        "name": "Body Unicórnio Praia",
+        "type": "baby",
+        "img": "../images/products/body_unicornio_a.jpg",
+        "color": "azul",
+        "size": ["P", "M", "G"],
+        "price": "R$74,00"
+    }
+
+    ]
+}
