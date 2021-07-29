@@ -7,7 +7,7 @@
             "img": "../images/products/kit_bunny.jpg",
             "color": ["branco", "rosa"],
             "size": ["P", "M"],
-            "price": 19
+            "price": 190
         },
         {
             "id": 1,
@@ -16,7 +16,7 @@
             "img": "../images/products/conjunto_whale.jpg",
             "color": ["azul", "cinza"],
             "size": ["PP","P", "M"],
-            "price": 19
+            "price": 190
         },
         {
             "id": 2,
@@ -25,7 +25,7 @@
             "img": "../images/products/body_animais.jpg",
             "color": "verde",
             "size": "P",
-            "price": 10
+            "price": 100
         },
         {
             "id": 3,
@@ -34,7 +34,7 @@
             "img": "../images/products/camiseta_flamingo.jpg",
             "color": "Azul",
             "size": [4, 6, 7, 8],
-            "price": 15
+            "price": 150
         },
         {
             "id": 4,
@@ -43,7 +43,7 @@
             "img": "../images/products/vestido_cherry.jpg",
             "color": "Azul escuro",
             "size": [4, 6, 7, 8, 9],
-            "price": 14
+            "price": 140
         },
         {
             "id": 5,
@@ -52,7 +52,7 @@
             "img": "../images/products/body_gliter.jpg",
             "color": "preto",
             "size": ["PP", "P", "M"],
-            "price": 13
+            "price": 130
         },
         {
             "id": 6,
@@ -61,7 +61,7 @@
             "img": "../images/products/vestido_folha.jpg",
             "color": "verde",
             "size": [4, 6, 8, 9],
-            "price": 15
+            "price": 150
         },
         {
             "id": 7,
@@ -70,7 +70,7 @@
             "img": "../images/products/vestido_folha_azul.jpg",
             "color": "azul",
             "size": [6, 7, 8],
-            "price": 17
+            "price": 170
         },
         {
             "id": 8,
@@ -79,7 +79,7 @@
             "img": "../images/products/vestido_flamingo.jpg",
             "color": "verde",
             "size": [4, 8, 9],
-            "price": 15
+            "price": 150
         },
         {
             "id": 9,
@@ -88,7 +88,7 @@
             "img": "../images/products/vestido_goiaba.jpeg",
             "color": "rosa",
             "size": [4, 6, 7, 8, 9],
-            "price": 56    
+            "price": 56   
         },
         {
             "id": 10,
