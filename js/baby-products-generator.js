@@ -82,6 +82,82 @@ filterByBiggestPrice = () => {
 
 // Filtro por COR
 
+
+
+/******************************************************************************** FILTRO ******************************************************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+//////////////////////////////////////////////// Filtro menor valor ////////////////////////////////////////////////
+
+let priceOrderedJson;
+filterByLowestPrice = (json) => {
+
+    productsContainer.innerHTML = ``;
+
+    priceOrderedJson = Object.values(json).sort(function(a,b) {
+        return a.price < b.price ? -1 : (a.price > b.price ? 1 : 0);
+    });
+
+    for(let x = 0; x < priceOrderedJson.length; x++) {
+        if(priceOrderedJson[x].type == 'baby') {
+            productsContainer.innerHTML += `
+
+            <div class="single-product">
+                <img src="`+priceOrderedJson[x].img+`">
+                <span class="catalog-line"></span>
+                <p class="product-title">`+priceOrderedJson[x].name+`</p>
+                <p class="product-price">R$`+priceOrderedJson[x].price+`,00</p>
+                <a class="product-button" key="`+priceOrderedJson[x].id+`" href="#">Comprar</a>
+            </div>
+
+            `;
+        }
+    }
+
+}
+
+
+//////////////////////////////////////////////// Filtro maior valor ////////////////////////////////////////////////
+
+filterByBiggestPrice = (json) => {
+
+    productsContainer.innerHTML = ``;
+
+    priceOrderedJson = Object.values(json).sort(function(a,b) {
+        return a.price < b.price ? 1 : (a.price > b.price ? -1 : 0);
+    });
+
+    for(let x = 0; x < priceOrderedJson.length; x++) {
+        if(priceOrderedJson[x].type == 'baby') {
+            productsContainer.innerHTML += `
+
+            <div class="single-product">
+                <img src="`+priceOrderedJson[x].img+`">
+                <span class="catalog-line"></span>
+                <p class="product-title">`+priceOrderedJson[x].name+`</p>
+                <p class="product-price">R$`+priceOrderedJson[x].price+`,00</p>
+                <a class="product-button" key="`+priceOrderedJson[x].id+`" href="#">Comprar</a>
+            </div>
+            `;
+
+        }
+    }
+
+}
+
+
+//////////////////////////////////////////////// Filtro por COR ////////////////////////////////////////////////
+
 filterByColor = (json, color) => {
     productsContainer.innerHTML = ``;
     for(let x = 0; x < json.length; x++) {
@@ -104,6 +180,6 @@ filterByColor = (json, color) => {
     }
 }
 
-//filterByColor(jsonObject.products, "azul");
+
 
 
