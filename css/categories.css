@@ -67,6 +67,14 @@
     border-radius: 5px;
 }
 
+.reset-button {
+    color: var(--main-blue-color);
+    padding: 0.3rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    margin-left: 0.5rem;
+}
 
 
 
@@ -231,6 +239,7 @@
     }
     .lowest-biggest {
         margin: auto;
+        margin-bottom: 1rem;
         justify-content: center;
         align-items: center;
     }
