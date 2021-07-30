@@ -77,23 +77,18 @@ filterByPrice = () => {
 
             productsContainer.innerHTML = ``;
 
-            for(let x = 0; x < json.length; x++) {  // percorre o json
+            json = json.filter(function(a) {
+                return a.price >= min && a.price <= max;
+            });
 
-                if(json[x].type == 'baby' && json[x].price >= min && json[x].price <= max) {
-                    exists = true;
-                    generateHTML(json, x);
-                    ;
 
+            for(let x = 0; x < json.length; x++) {
+
+                if(json[x].type == 'baby') {
+        
+                    generateHTML(json, x);;
                 }
             } 
-
-            if(!exists) { // caso produto nao exista
-
-                productsContainer.innerHTML = `'
-                    <h2>Nenhum produto foi encontrado :(</h2>
-                `;
-
-            }
 
         }
 
