@@ -158,6 +158,17 @@ filterByColor = (json, color) => {
     }
 }
 
+// Reseta os filtros
+
+resetFilter = () => {
+    productsContainer.innerHTML = ``;
+    json = jsonObject.products; 
+    document.getElementById('min-value').value = "";
+    document.getElementById('max-value').value = "";
+    document.getElementsByClassName('form-select')[0].value = "default";
+    generateProducts();
+}
+
 
 
 
