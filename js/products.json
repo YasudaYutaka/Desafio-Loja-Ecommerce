@@ -107,6 +107,78 @@
             "color": ["azul"],
             "size": ["P", "M", "G"],
             "price": 74    
+        },
+        {
+            "id": 12,
+            "name": "Pijama Bailarina",
+            "type": "kid",
+            "img": "../images/products/pijama_bailarina.jpg",
+            "color": ["branco", "rosa"],
+            "size": [1, 2, 3, 4, 7],
+            "price": 96    
+        },
+        {
+            "id": 13,
+            "name": "Macaquinho Sorvete",
+            "type": "baby",
+            "img": "../images/products/macaquinho_sorvete.jpg",
+            "color": ["marrom"],
+            "size": ["M", "G"],
+            "price": 84    
+        },
+        {
+            "id": 14,
+            "name": "Macaquinho Coelho",
+            "type": "baby",
+            "img": "../images/products/macaquinho_coelho.jpg",
+            "color": ["branco"],
+            "size": ["P", "M", "G"],
+            "price": 80    
+        },
+        {
+            "id": 15,
+            "name": "Conjunto Praia Unicórnio",
+            "type": "kid",
+            "img": "../images/products/conjunto_unicornio.praia.jpg",
+            "color": ["rosa"],
+            "size": [4, 5, 6, 7, 8],
+            "price": 145    
+        },
+        {
+            "id": 16,
+            "name": "Macaquinho Marinho",
+            "type": "baby",
+            "img": "../images/products/macaquinho_marinho.jpg",
+            "color": ["azul"],
+            "size": ["M", "G"],
+            "price": 102   
+        },
+        {
+            "id": 17,
+            "name": "Kit Dino",
+            "type": "baby",
+            "img": "../images/products/kit_dino.jpg",
+            "color": ["azul", "branco"],
+            "size": ["M"],
+            "price": 124   
+        },
+        {
+            "id": 18,
+            "name": "Casaco Nuvem",
+            "type": "baby",
+            "img": "../images/products/casaco_nuvem.jpg",
+            "color": ["branco"],
+            "size": ["P", "G"],
+            "price": 55   
+        },
+        {
+            "id": 19,
+            "name": "Conjunto Fox",
+            "type": "baby",
+            "img": "../images/products/conjunto_fox.jpg",
+            "color": ["vermelho"],
+            "size": ["P", "M", "G"],
+            "price": 42  
         }
     ]
 }
