@@ -61,6 +61,8 @@ selectedFilter = () => {
 
 // Filtro preco minimo e maximo 
 
+let filterCount = 0;
+
 filterByPrice = () => {
 
     if(document.getElementById('min-value').value == "" || document.getElementById('max-value').value == "") { // verifica se esta vazio
@@ -74,6 +76,14 @@ filterByPrice = () => {
         if(min > max) {
             alert('Digite um valor mínimo menor do que o valor máximo');
         } else {
+
+            filterCount++;
+            if(filterCount % 2 == 0) { // caso a pessoa clique duas vezes no botao gera outro json para evitar de n ter produtos
+                json = jsonObject.products;
+                if (filterCount == 2) { // reseta para filtro para evitar bugs
+                    filterCount = 1; 
+                }
+            }
 
             productsContainer.innerHTML = ``;
 
