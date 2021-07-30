@@ -52,6 +52,21 @@ selectedFilter = () => {
 
 }
 
+// Gera produto 
+generateHTML = (json, x) => {
+    productsContainer.innerHTML += `
+
+            <div class="single-product">
+                <img src="`+json[x].img+`">
+                <span class="catalog-line"></span>
+                <p class="product-title">`+json[x].name+`</p>
+                <p class="product-price">R$`+json[x].price+`,00</p>
+                <a class="product-button" key="`+json[x].id+`" href="#">Comprar</a>
+            </div>
+
+    `
+}
+
 
 
 // Filtro preco minimo e maximo 
@@ -75,19 +90,9 @@ filterByPrice = () => {
             for(let x = 0; x < json.length; x++) {  // percorre o json
 
                 if(json[x].type == 'baby' && json[x].price >= min && json[x].price <= max) {
-
                     exists = true;
-
-                    productsContainer.innerHTML += `
-
-                        <div class="single-product">
-                            <img src="`+json[x].img+`">
-                            <span class="catalog-line"></span>
-                            <p class="product-title">`+json[x].name+`</p>
-                            <p class="product-price">R$`+json[x].price+`,00</p>
-                            <a class="product-button" key="`+json[x].id+`" href="#">Comprar</a>
-                        </div>
-                    `;
+                    generateHTML(json, x);
+                    ;
 
                 }
             } 
@@ -121,17 +126,7 @@ filterByLowestPrice = (json) => {
 
         if(json[x].type == 'baby') {
 
-            productsContainer.innerHTML += `
-
-                <div class="single-product">
-                    <img src="`+json[x].img+`">
-                    <span class="catalog-line"></span>
-                    <p class="product-title">`+json[x].name+`</p>
-                    <p class="product-price">R$`+json[x].price+`,00</p>
-                    <a class="product-button" key="`+json[x].id+`" href="#">Comprar</a>
-                </div>
-
-            `;
+            generateHTML(json, x);;
         }
     } 
 
@@ -152,17 +147,7 @@ filterByBiggestPrice = (json) => {
     for(let x = 0; x < json.length; x++) {
 
         if(json[x].type == 'baby') {
-            productsContainer.innerHTML += `
-
-                <div class="single-product">
-                    <img src="`+json[x].img+`">
-                    <span class="catalog-line"></span>
-                    <p class="product-title">`+json[x].name+`</p>
-                    <p class="product-price">R$`+json[x].price+`,00</p>
-                    <a class="product-button" key="`+json[x].id+`" href="#">Comprar</a>
-                </div>
-
-            `;
+            generateHTML(json, x);;
 
         }
     }
@@ -181,17 +166,7 @@ filterByColor = (json, color) => {
         for(let z = 0; z < json[x].color.length; z++) { // Caso tenha mais de uma cor, percorre o array
 
             if(json[x].type == "baby" && json[x].color[z] == color) {
-                productsContainer.innerHTML += `
-                
-                    <div class="single-product">
-                        <img src="`+json[x].img+`">
-                        <span class="catalog-line"></span>
-                        <p class="product-title">`+json[x].name+`</p>
-                        <p class="product-price">R$`+json[x].price+`,00</p>
-                        <a class="product-button" key="`+json[x].id+`" href="#">Comprar</a>
-                    </div>
-                
-                `;
+                generateHTML(json, x);;
             }
 
         }
