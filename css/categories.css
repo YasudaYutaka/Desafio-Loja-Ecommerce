@@ -1,0 +1,130 @@
+/*******************
+      FILTERS
+*******************/
+
+.filters {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem;
+    width: 100%;
+    margin: 2rem 0;
+    background-color: #5D5D81;
+    color: var(--text-white-color);
+}
+
+.filters-title {
+    font-weight: 800;
+    font-size: 1.4rem;
+}
+
+.min-max-form {
+    display: flex;
+    flex-direction: row;
+}
+
+.min-max-form label {
+    margin-right: 0.5rem;
+}
+
+.min-max-input {
+    border-radius: 5px;
+    border: none;
+    padding: 4px;
+}
+
+.min-max-input:focus {
+    outline: none;
+    border: 1px solid var(--main-blue-color);
+    border-radius: 5px;
+}
+
+#min-max-button {
+    color: var(--main-blue-color);
+    padding: 0.3rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    margin-left: 0.5rem;
+}
+
+.lowest-biggest {
+    display: flex;
+    flex-direction: row;
+}
+
+.form-select {
+    margin-left: 0.6rem;
+    border-radius: 5px;
+    border-color: var(--main-blue-color);
+}
+
+.form-select:focus {
+    outline: none;
+    border-color: var(--main-blue-color);
+    border-radius: 5px;
+}
+
+
+
+/*******************
+    MEDIA QUERY
+*******************/
+
+@media (max-width: 1128px) {
+    .section-title {
+        font-size: 1.5rem;
+    }
+    .filters-title {
+        font-size: 1.2rem;
+    }
+    .min-max-form  {
+        flex-direction: column;
+        margin-bottom: 0.3em;
+        align-items: center;
+    }
+    .min-max-form label {
+        margin-right: 0;
+    }
+    .min-max-input {
+        width: 5rem;
+        margin: 0.3rem 0;
+    }
+    #min-max-button {
+        margin-left: 0;
+        width: 5rem;
+    }
+    .lowest-biggest {
+        flex-direction: column;
+    }
+    .lowest-biggest p {
+        margin-bottom: 0.3em;
+    }
+    .form-select {
+        margin-left: 0;
+        padding: 0.2rem;
+    }
+}
+
+@media (max-width: 620px) {
+    .filters {
+        flex-direction: column;
+        padding: 1rem;
+    }
+    .min-max-form {
+        margin-left: auto;
+    } 
+    .min-max-input {
+        margin: 0.4rem 0;
+    }
+    .lowest-biggest {
+        margin: auto;
+        justify-content: center;
+        align-items: center;
+    }
+    .lowest-biggest p {
+        margin-top: 0.3em;
+    }
+}
