@@ -30,29 +30,96 @@ generateProducts = () => {
 }
 
 generateProducts();
-generateProducts();
 
 
 
 
 /******************************************************************************** FILTRO ******************************************************************************/
 
+let json = jsonObject.products; 
+
+// Seleciona a funcao de acordo com a opcao selecionada
+
+selectedFilter = () => {
+
+    var selectedOption = document.getElementsByClassName('form-select')[0].value;
+
+    if(selectedOption == 'price-ascending') {
+        filterByLowestPrice(json);
+    } else if(selectedOption == 'price-descending') {
+        filterByBiggestPrice(json);
+    } 
+
+}
 
 
 
+// Filtro preco minimo e maximo 
 
-////////////////////////////////////////////////// Filtro preco minimo e maximo //////////////////////////////////////////////// 
+filterByPrice = () => {
 
-filterByPrice = (json, min, max) => {
+    if(document.getElementById('min-value').value == "" || document.getElementById('max-value').value == "") { // verifica se esta vazio
+        alert('Digite um valor');
+    } else {
 
-    let exists = false;
+        let min = Number.parseInt(document.getElementById('min-value').value);
+        let max = Number.parseInt(document.getElementById('max-value').value);
+        let exists = false;
+
+        if(min > max) {
+            alert('Digite um valor mínimo menor do que o valor máximo');
+        } else {
+
+            productsContainer.innerHTML = ``;
+
+            for(let x = 0; x < json.length; x++) {  // percorre o json
+
+                if(json[x].type == 'baby' && json[x].price >= min && json[x].price <= max) {
+
+                    exists = true;
+
+                    productsContainer.innerHTML += `
+
+                        <div class="single-product">
+                            <img src="`+json[x].img+`">
+                            <span class="catalog-line"></span>
+                            <p class="product-title">`+json[x].name+`</p>
+                            <p class="product-price">R$`+json[x].price+`,00</p>
+                            <a class="product-button" key="`+json[x].id+`" href="#">Comprar</a>
+                        </div>
+                    `;
+
+                }
+            } 
+
+            if(!exists) { // caso produto nao exista
+
+                productsContainer.innerHTML = `'
+                    <h2>Nenhum produto foi encontrado :(</h2>
+                `;
+
+            }
+
+        }
+
+    }
+}
+
+
+
+// Filtro menor valor 
+
+filterByLowestPrice = (json) => {
+
     productsContainer.innerHTML = ``;
+
+    json.sort(function(a,b) {   // filtra os valores em ordem crescente
+        return a.price < b.price ? -1 : (a.price > b.price ? 1 : 0);
+    });
 
     for(let x = 0; x < json.length; x++) {
 
-        if(json[x].type == 'baby' && json[x].price >= min && json[x].price <= max) {
-
-            exists = true;
+        if(json[x].type == 'baby') {
 
             productsContainer.innerHTML += `
 
@@ -63,83 +130,38 @@ filterByPrice = (json, min, max) => {
                     <p class="product-price">R$`+json[x].price+`,00</p>
                     <a class="product-button" key="`+json[x].id+`" href="#">Comprar</a>
                 </div>
-            `;
-
-        }
-    }
-    if(!exists) {
-        productsContainer.innerHTML = `'
-            <h2>Nenhum produto foi encontrado :(</h2>
-        `;
-    }
-}
-
-//console.log(filterByPrice(jsonObject.products, 100, 190));
-
-
-
-
-
-
-
-
-
-
-//////////////////////////////////////////////// Filtro menor valor ////////////////////////////////////////////////
-
-let priceOrderedJson;
-
-filterByLowestPrice = (json) => {
-
-    productsContainer.innerHTML = ``;
-
-    priceOrderedJson = Object.values(json).sort(function(a,b) {
-        return a.price < b.price ? -1 : (a.price > b.price ? 1 : 0);
-    });
-
-    for(let x = 0; x < priceOrderedJson.length; x++) {
-
-        if(priceOrderedJson[x].type == 'baby') {
-
-            productsContainer.innerHTML += `
-
-                <div class="single-product">
-                    <img src="`+priceOrderedJson[x].img+`">
-                    <span class="catalog-line"></span>
-                    <p class="product-title">`+priceOrderedJson[x].name+`</p>
-                    <p class="product-price">R$`+priceOrderedJson[x].price+`,00</p>
-                    <a class="product-button" key="`+priceOrderedJson[x].id+`" href="#">Comprar</a>
-                </div>
 
             `;
         }
-    }
+    } 
 
 }
 
 
-//////////////////////////////////////////////// Filtro maior valor ////////////////////////////////////////////////
+
+// Filtro maior valor 
 
 filterByBiggestPrice = (json) => {
 
     productsContainer.innerHTML = ``;
 
-    priceOrderedJson = Object.values(json).sort(function(a,b) {
+    json.sort(function(a,b) {   // filtra os valores em ordem decrescente
         return a.price < b.price ? 1 : (a.price > b.price ? -1 : 0);
     });
 
-    for(let x = 0; x < priceOrderedJson.length; x++) {
+    for(let x = 0; x < json.length; x++) {
 
-        if(priceOrderedJson[x].type == 'baby') {
+        if(json[x].type == 'baby') {
             productsContainer.innerHTML += `
 
                 <div class="single-product">
-                    <img src="`+priceOrderedJson[x].img+`">
+                    <img src="`+json[x].img+`">
                     <span class="catalog-line"></span>
-                    <p class="product-title">`+priceOrderedJson[x].name+`</p>
-                    <p class="product-price">R$`+priceOrderedJson[x].price+`,00</p>
-                    <a class="product-button" key="`+priceOrderedJson[x].id+`" href="#">Comprar</a>
+                    <p class="product-title">`+json[x].name+`</p>
+                    <p class="product-price">R$`+json[x].price+`,00</p>
+                    <a class="product-button" key="`+json[x].id+`" href="#">Comprar</a>
                 </div>
+
             `;
 
         }
@@ -148,17 +170,17 @@ filterByBiggestPrice = (json) => {
 }
 
 
-//////////////////////////////////////////////// Filtro por COR ////////////////////////////////////////////////
+
+// Filtro por COR (Decidi nao usar)
 
 filterByColor = (json, color) => {
 
     productsContainer.innerHTML = ``;
 
     for(let x = 0; x < json.length; x++) {
-        for(let z = 0; z < json[x].color.length; z++) {
+        for(let z = 0; z < json[x].color.length; z++) { // Caso tenha mais de uma cor, percorre o array
 
             if(json[x].type == "baby" && json[x].color[z] == color) {
-                console.log(json[x]);//////////////////////////////////
                 productsContainer.innerHTML += `
                 
                     <div class="single-product">
