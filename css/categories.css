@@ -89,7 +89,7 @@
 
 #products {
     display: grid;
-    grid-template-columns: repeat(auto-fill, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     margin: 0 auto;
     width: 100%;
 }
@@ -146,7 +146,13 @@
     opacity: 0.8;
 }
 
+/*******************
+    PAGINATION
+*******************/
 
+.pagination {
+
+}
 
 /*******************
     MEDIA QUERY
