@@ -19,7 +19,10 @@ generateHTML = (json, x) => {
                 <span class="catalog-line"></span>
                 <p class="product-title">`+json[x].name+`</p>
                 <p class="product-price">R$`+json[x].price+`,00</p>
-                <a class="product-button" key="`+json[x].id+`" href="#">Comprar</a>
+                <form method='get' action="product.html">
+                    <input type="hidden" value="`+json[x].id+`" name='id'/>
+                    <button class="product-button" type="submit">Comprar</button>
+                </form>
             </div>
 
     `
@@ -178,7 +181,3 @@ resetFilter = () => {
     document.getElementsByClassName('form-select')[0].value = "default";
     generateProducts();
 }
-
-
-
-
