@@ -138,7 +138,8 @@
 }
 
 .product-button {
-    width: 50%;
+    cursor: pointer;
+    width: 150px;
     font-size: 0.8rem;
     margin: 0.2rem 0;
     background-color: var(--main-blue-color);
