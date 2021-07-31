@@ -10,6 +10,11 @@ requestJSON = () => {
     }
 }
 
+// pegar parametro URL
+let query = location.search; // pega querystring da pagina 
+let keyValue = query.split('='); //divide em um array
+let catValue = keyValue[1]; // pega valor do id em string (baby ou kid)
+
 // Gera HTML do produto 
 generateHTML = (json, x) => {
     productsContainer.innerHTML += `
@@ -32,7 +37,7 @@ generateHTML = (json, x) => {
 generateProducts = () => {
     requestJSON();
     for(let x = 0; x < jsonObject.products.length; x++) {
-        if(jsonObject.products[x].type =='baby') {
+        if(jsonObject.products[x].type ==catValue) {
             generateHTML(jsonObject.products, x);
         }
     }
@@ -97,7 +102,7 @@ filterByPrice = () => {
 
             for(let x = 0; x < json.length; x++) {
 
-                if(json[x].type == 'baby') {
+                if(json[x].type == catValue) {
         
                     generateHTML(json, x);;
                 }
@@ -122,7 +127,7 @@ filterByLowestPrice = (json) => {
 
     for(let x = 0; x < json.length; x++) {
 
-        if(json[x].type == 'baby') {
+        if(json[x].type == catValue) {
 
             generateHTML(json, x);;
         }
@@ -144,7 +149,7 @@ filterByBiggestPrice = (json) => {
 
     for(let x = 0; x < json.length; x++) {
 
-        if(json[x].type == 'baby') {
+        if(json[x].type == catValue) {
             generateHTML(json, x);;
 
         }
@@ -163,7 +168,7 @@ filterByColor = (json, color) => {
     for(let x = 0; x < json.length; x++) {
         for(let z = 0; z < json[x].color.length; z++) { // Caso tenha mais de uma cor, percorre o array
 
-            if(json[x].type == "baby" && json[x].color[z] == color) {
+            if(json[x].type == catValue && json[x].color[z] == color) {
                 generateHTML(json, x);;
             }
 
