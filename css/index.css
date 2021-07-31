@@ -104,7 +104,12 @@ CONTROLS
     height: auto;
     border-radius: 15px 15px 0 0;
 }
-
+.categories-button {
+    background-color: var(--main-blue-color);
+    border-radius: 15px;
+    border: 0;
+    padding: 0;
+}
 .categories-text {
     color: var(--text-white-color);
     font-size: 2rem;
