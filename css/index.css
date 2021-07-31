@@ -106,6 +106,7 @@ CONTROLS
 }
 
 .categories-button {
+    cursor: pointer;
     background-color: var(--main-blue-color);
     border-radius: 15px;
     border: 0;
