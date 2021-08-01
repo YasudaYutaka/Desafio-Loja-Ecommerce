@@ -5,7 +5,7 @@
 ## Sobre o projeto  :baby:
 
 Esse projeto foi realizado para um desafio cujo objetivo era a criação de um layout de um e-commerce que vende produtos de vestuário para bebês e crianças. Foi necessário fazer três páginas, uma inicial, uma de categoria e a última do produto.
-Os produtos nas páginas de categoria (babê e criança) e do produto são gerados através de um arquivo JSON.
+Os produtos nas páginas de categoria (bebê e criança) e do produto são gerados através de um arquivo JSON.
 
 ## Tecnologias :computer:
 
