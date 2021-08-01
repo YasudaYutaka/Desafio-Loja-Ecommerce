@@ -139,7 +139,7 @@
             "id": 15,
             "name": "Conjunto Praia Unicórnio",
             "type": "kid",
-            "img": "../images/products/conjunto_unicornio.praia.jpg",
+            "img": "../images/products/conjunto_unicornio_praia.jpg",
             "color": ["rosa"],
             "size": [4, 5, 6, 7, 8],
             "price": 145    
@@ -179,6 +179,33 @@
             "color": ["vermelho"],
             "size": ["P", "M", "G"],
             "price": 42  
+        },
+        {
+            "id": 20,
+            "name": "Camiseta Dino",
+            "type": "kid",
+            "img": "../images/products/camiseta_dino.jpg",
+            "color": ["branca"],
+            "size": [1, 2, 4, 5, 6, 7],
+            "price": 33
+        },
+        {
+            "id": 21,
+            "name": "Pijama Food",
+            "type": "kid",
+            "img": "../images/products/pijama_fast_food.jpg",
+            "color": ["azul", "preto"],
+            "size": [1, 2, 3, 4, 5, 6, 7],
+            "price": 102
+        },
+        {
+            "id": 22,
+            "name": "Conjunto Dino",
+            "type": "kid",
+            "img": "../images/products/conjunto_dino.jpg",
+            "color": ["verde"],
+            "size": [3, 4, 5],
+            "price": 98
         }
     ]
 }
