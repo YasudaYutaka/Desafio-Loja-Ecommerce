@@ -206,12 +206,13 @@ CATALOG
 }
 
 .product-button {
-    width: 60%;
+    width: 100%;
     margin: 1rem 0;
+    cursor: pointer;
     background-color: var(--main-blue-color);
     border: none;
     border-radius: 40px;
-    padding: 0.7rem;
+    padding: 0.7rem 3.5rem;
     text-transform: uppercase;
     color: var(--text-white-color);
     text-align: center;
@@ -250,7 +251,7 @@ CATALOG
         font-size: 1.2rem;
     }
     .product-button {
-        width: 50%;
+        padding: 0.7rem 2rem;
         font-size: 0.7rem;
     }
 }
@@ -333,7 +334,6 @@ CATALOG
         font-size: 0.6rem;
     }
     .product-button {
-        width: 40%;
         padding: 0.5rem;
         font-size: 0.6rem;
         margin: 0.5rem 0;
