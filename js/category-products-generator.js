@@ -56,7 +56,7 @@ let json = jsonObject.products;
 
 selectedFilter = () => {
 
-    var selectedOption = document.getElementsByClassName('form-select')[0].value;
+    let selectedOption = document.getElementsByClassName('form-select')[0].value;
 
     if(selectedOption == 'price-ascending') {
         filterByLowestPrice(json);

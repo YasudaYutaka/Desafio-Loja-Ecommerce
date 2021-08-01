@@ -40,7 +40,7 @@ function moveSlide(direction) {
 
 // AUTO-PLAY //
 
-var timer = setInterval(autoPlay, 6000);
+let timer = setInterval(autoPlay, 6000);
 
 function autoPlay() {
     moveSlide("next");

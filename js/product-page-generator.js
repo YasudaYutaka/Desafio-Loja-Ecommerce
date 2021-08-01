@@ -38,8 +38,8 @@ generateProductHTML = () => {
 
 // Gera opcoes de tamanho
 generateSizeOptions = () => {
-    for(var x = 0; x < size.length; x++) {
-        var opt = document.createElement('option');    
+    for(let x = 0; x < size.length; x++) {
+        let opt = document.createElement('option');    
         opt.value = size[x];
         opt.innerHTML = size[x];
         selectOptions.appendChild(opt);
