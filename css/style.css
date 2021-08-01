@@ -241,7 +241,7 @@ footer h4 {
         order: 3;
     }
     .nav-input {
-        display: none
+       display: none;
     }
     #search-button {
         margin-left: 2rem;
